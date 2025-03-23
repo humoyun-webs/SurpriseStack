@@ -1,66 +1,84 @@
-# 🎁 Surprise E-Commerce
+# Turborepo starter
 
-Welcome to **Surprise E-Commerce**, a cutting-edge platform that aggregates gift-selling stores into one seamless marketplace. Our mission is to revolutionize online gift shopping by offering a curated selection of unique products from multiple vendors, all in one place.
+This Turborepo starter is maintained by the Turborepo core team.
 
-## 🚀 Features
+## Using this example
 
-### 🛒 For Shoppers
-- Browse and discover gifts from various stores
-- Personalized recommendations based on interests
-- Secure checkout with multiple payment options
-- Real-time tracking of orders
-- Wishlist and saved items functionality
+Run the following command:
 
-### 🏪 For Vendors
-- Easy onboarding and product listing
-- Inventory and order management system
-- Analytics dashboard for insights
-- Secure payouts and financial tracking
-- Integration with major delivery services
-
-### 💡 Tech Stack
-#### **Frontend**
-- **Next.js** – Fast and scalable React framework
-- **Tailwind CSS** – Modern and customizable UI design
-- **TypeScript** – Ensures code reliability and maintainability
-
-#### **Backend**
-- **NestJS** – Scalable and modular backend architecture
-- **PostgreSQL** – Relational database for structured data
-- **Redis** – Caching for high performance
-- **Supabase** – Real-time database interactions
-
-#### **DevOps & Deployment**
-- **Docker** – Containerized applications for easy scaling
-- **CI/CD Pipelines** – Automated deployment and testing
-- **Cloud Hosting** – Scalable infrastructure (AWS/Vercel/Heroku)
-
-## 📦 Installation & Setup
 ```sh
-# Clone the repository
-git clone https://github.com/yourusername/surprise-ecommerce.git
-
-# Navigate to the project folder
-cd surprise-ecommerce
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
+npx create-turbo@latest
 ```
 
-## 🛠 Contributing
-We welcome contributions! If you'd like to improve the platform, follow these steps:
-1. Fork the repository
-2. Create a new branch (`feature/new-feature`)
-3. Commit your changes (`git commit -m 'Add new feature'`)
-4. Push to your branch (`git push origin feature/new-feature`)
-5. Submit a Pull Request
+## What's inside?
 
-## 📜 License
-This project is licensed under the MIT License.
+This Turborepo includes the following packages/apps:
 
----
-💡 **Let's build something amazing together!** If you have any questions or ideas, feel free to reach out. 🚀
+### Apps and Packages
 
+- `docs`: a [Next.js](https://nextjs.org/) app
+- `web`: another [Next.js](https://nextjs.org/) app
+- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+
+Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+
+### Utilities
+
+This Turborepo has some additional tools already setup for you:
+
+- [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
+
+### Build
+
+To build all apps and packages, run the following command:
+
+```
+cd my-turborepo
+pnpm build
+```
+
+### Develop
+
+To develop all apps and packages, run the following command:
+
+```
+cd my-turborepo
+pnpm dev
+```
+
+### Remote Caching
+
+> [!TIP]
+> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+
+Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+
+By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+
+```
+cd my-turborepo
+npx turbo login
+```
+
+This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+
+Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+
+```
+npx turbo link
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
+- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
+- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
+- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
+- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
+- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
